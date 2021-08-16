@@ -2,36 +2,70 @@
 const Employee = require(lib/Employee.js);
 
 // Test for the Employee object
-it('creates an object for employee', () => {
-    const employee = new Employee('Brandon', 654, 'bvanburenwx@gmail.com');
+describe('Employee', () => {
+    describe('Initialization', () => {
+        it('creates an object for employee', () => {
+            const name = 'Brandon';
+            const id = 50;
+            const email = 'bvanburenwx@gmail.com';
+            
+            const addEmployee = new Employee(name, id, email);
 
-    expect(employee.name).toEqual(expect.any(String));
-    expect(employee.id).toEqual(expect.any(Number));
-    expect(employee.email).toEqual(expect.any(String));
+            expect(addEmployee.name).toEqual(name);
+            expect(addEmployee.id).toEqual(id);
+            expect(addEmployee.email).toEqual(email);
+        });
+    });
 });
+
 
 // Test for getting Name from getName function from employee.js
-it('gets employee name', () => {
-    const employee = new Employee('Brandon', 654, 'bvanburenwx@gmail.com')
+describe('getName', () => {  
+    it('gets employee "name"', () => {
+        const name = 'Brandon';
+        const id = 50;
+        const email = 'bvanburenwx@gmail.com';
 
-    expect(employee.getName()).toEqual(expect.any(String));
+        const addEmployee = new Employee(name, id, email);
+
+        expect(addEmployee.getName()).toEqual(name);
+    });
 });
+
 
 // Test for getting id from getID function from employee.js
-it('gets employee id from input', () => {
-    const employee = new Employee('Brandon', 654, 'bvanburenwx@gmail.com')
-
-    expect(employee.getId()). toEqual(expect.any(Number));
+describe('getId', () => {
+    it('gets employee id from input', () => {
+        const name = 'Brandon';
+        const id = 50;
+        const email = 'bvanburenwx@gmail.com';
+    
+        const addEmployee = new Employee(name, id, email);    
+    
+        expect(addEmployee.getId()).toEqual(id);
+    });
 });
 
-it('get employee email from input', () => {
-    const employee =new Employee('Brandon', 654, 'bvanburenwx@gmail.com')
+describe('getEmail', () => {
+    it('get employee email from input', () => {
+        const name = 'Brandon';
+        const id = 50;
+        const email = 'bvanburenwx@gmail.com';
 
-    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
+        const addEmployee = new Employee(name, id, email);    
+
+        expect(addEmployee.getEmail()).toEqual(email);
+    });
 });
 
-it('gets role from employee upon input', () => {
-    const employee = new Employee('Brandon', 654, 'bvanburenwx@gmail.com')
-
-    expect(employee.getRole()).toEqual('Employee');
+describe('getRole', () => {
+    it('gets role from employee upon input', () => {
+        const name = 'Brandon';
+        const id = 50;
+        const email = 'bvanburenwx@gmail.com';
+    
+        const addEmployee = new Employee(name, id, email);    
+    
+        expect(addEmployee.getRole()).toEqual('Employee');
+    });
 });

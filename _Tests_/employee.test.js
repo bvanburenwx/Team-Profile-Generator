@@ -1,5 +1,5 @@
 // tests for the employee constructor 
-const Employee = require(lib/Employee.js);
+const Employee = require("../lib/Employee.js");
 
 // Test for the Employee object
 describe('Employee', () => {

@@ -2,8 +2,9 @@ const generatedHTML = require('./src/generateHTML');
 // access file system and inquirer to generate questions and create HTML
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { type } = require('os');
-const { template } = require('@babel/core');
+const path = require('path');
+
+const outputDirectory = path.resolve(__dirname, 'dist');
 
 // empty array for team
 const inputTeam = [];
@@ -33,14 +34,7 @@ const addManager = [
         },
     ];
 
-    // .then(managerInput => {
-    //     const { name, id, email, officeNumber } = managerInput;
-    //     const manager = new manager (name, id, email, officeNumber);
-
-    //     inputTeam.push(manager);
-    //     console.log(manager);
-    // });
-    function writeToFile(fileName, data) {
+    function renderTeam(fileName, data) {
         fs.writeFile(fileName, data, (err) => {
             if(err) {
                 console.err(error);

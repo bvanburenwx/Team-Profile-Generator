@@ -1,5 +1,5 @@
 // tests for the employee constructor 
-const Employee = require();
+const Employee = require(lib/Employee.js);
 
 // Test for the Employee object
 test('creates an object for employee', () => {
@@ -15,4 +15,4 @@ test('gets employee name', () => {
     const employee = new Employee('Brandon', 654, 'bvanburenwx@gmail.com')
 
     expect(employee.getName()).toEqual(expect.any(String));
-})
+});

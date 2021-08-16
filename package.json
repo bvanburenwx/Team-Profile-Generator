@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "team profile generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanburenwx/Team-Profile-Generator.git"
+  },
+  "author": "Brandon Van Buren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvanburenwx/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/bvanburenwx/Team-Profile-Generator#readme"
+}

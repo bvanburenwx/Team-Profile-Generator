@@ -1,0 +1,35 @@
+header {
+    background-color: #F1F1F2;
+    text-align: center;
+    padding: 25px;
+    color: #1995AD;
+}
+
+body {
+    background-color: #1995AD;
+}
+
+.profile {
+    margin-top: 50px;
+}
+
+.custom-card{
+    padding: 25px;
+    margin: 25px;
+    background-color: #BCBABE;
+}
+
+.custom-content {
+    background-color: #A1D6E2;
+}
+
+.custom-info {
+    background-color: #A1D6E2;
+    color: #1995AD;
+    border: solid;
+}
+
+.custom-info-title {
+    color: #1995AD;
+    text-align: center;
+}
